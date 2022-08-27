@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Search</title>
+    <title>All Search</title>
     <style type="text/css">
         html,
         body {
@@ -19,35 +19,43 @@
             width: 100%;
         }
 
-        .web {
+        .search {
             display: table-cell;
             text-align: center;
             vertical-align: middle;
         }
-    </style>
+		
+		input {
+			width:15em;
+		}
+	
+		button {
+		    width:15em;
+		}
+		
 
+			
+    </style>
 </head>
 
 <body>
     <div class="parent">
-        <div class="web">
-            <form name="webYandex" method="get" action="https://www.yandex.ru/yandsearch">
-                <input type="text" name="text" size=50 value="" placeholder="Yandex" autocomplete="off" autofocus>
-                <input type=submit value="Search Yandex" style="width:20em">
-            </form>
-            <br>
-            <form name="webGoogle" method="get" action="https://www.google.com/search">
-                <input type="q" name="q" size=50 value="" placeholder="Google" autocomplete="off">
-                <input type=submit value="Search Google" style="width:20em">
-            </form>
-            <br>
-            <form name="webDuckDuckGo" method="get" action="https://duckduckgo.com">
-                <input type="q" name="q" size=50 value="" placeholder="DuckDuckGo" autocomplete="off">
-                <input type=submit value="Search DuckDuckGo" style="width:20em">
-            </form>
+		<div class="search">
+			<form id="webAll" method="get">
+				<input id="webSearch" value="" placeholder="Search text" autocomplete="off" required autofocus>
+				<br><br><br>
+				<button id="google" type="submit" value="q"      onclick="webSearch.name = this.value" formaction="https://www.google.com/search"               >Search Google</button>
+				<br><br>
+				<button id="yandex" type="submit" value="text"   onclick="webSearch.name = this.value" formaction="https://www.yandex.ru/yandsearch"            >Search Yandex</button>
+				<br><br>
+				<button id="ddgo"   type="submit" value="q"      onclick="webSearch.name = this.value" formaction="https://duckduckgo.com"                      >Search DuckDuckGo</button>
+				<br><br>
+				<button id="wiki"   type="submit" value="search" onclick="webSearch.name = this.value" formaction="https://ru.wikipedia.org/wiki/Special:Search">Search Wikipedia</button>
+				<br><br>
+				<button id="walpha" type="submit" value="i"      onclick="webSearch.name = this.value" formaction="https://www.wolframalpha.com/input/"         >Search WolframAlpha</button>
+
+			</form>
         </div>
     </div>
-
 </body>
-
 </html>
