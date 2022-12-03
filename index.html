@@ -10,7 +10,7 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            background-color: #2e9e88;
+            background-color: #3b3b3b;
         }
 
         .parent {
@@ -26,15 +26,47 @@
         }
 		
 		input {
-			width:15em;
+			width:45em;
+            height: inherit;
+            font-size: 1em;
 		}
 	
 		button {
-		    width:15em;
+			background-repeat: no-repeat;
+			border: none;
+			background-position: center center;
+			background-color: transparent; 
+		    width: 180px;
+            height: 59px;
 		}
 		
 
+        #google {
+			background-image: url('./logo/googlelogo_color.png');
+			font-size: 0;
+		}
+		
+		#yandex {
+			background-image: url('./logo/yandexlogo_color.png');
+			font-size: 0;
+		}
+
+        #ddgo {
+			background-image: url('./logo/duckduckgologo_color.png');
+			font-size: 0;
+		}
+
+        #wiki {
+			background-image: url('./logo/wikipedialogo.png');
+			font-size: 0;
+		}
 			
+        #walpha {
+			background-image: url('./logo/wolframalphalogo_colpr.png');
+			font-size: 0;
+		}
+
+
     </style>
 </head>
 
@@ -45,15 +77,14 @@
 				<input id="webSearch" value="" placeholder="Search text" autocomplete="off" required autofocus>
 				<br><br><br>
 				<button id="google" type="submit" value="q"      onclick="webSearch.name = this.value" formaction="https://www.google.com/search"               >Search Google</button>
-				<br><br>
+				<br>
 				<button id="yandex" type="submit" value="text"   onclick="webSearch.name = this.value" formaction="https://www.yandex.ru/yandsearch"            >Search Yandex</button>
-				<br><br>
+				<br>
 				<button id="ddgo"   type="submit" value="q"      onclick="webSearch.name = this.value" formaction="https://duckduckgo.com"                      >Search DuckDuckGo</button>
-				<br><br>
+				<br>
 				<button id="wiki"   type="submit" value="search" onclick="webSearch.name = this.value" formaction="https://ru.wikipedia.org/wiki/Special:Search">Search Wikipedia</button>
-				<br><br>
+				<br>
 				<button id="walpha" type="submit" value="i"      onclick="webSearch.name = this.value" formaction="https://www.wolframalpha.com/input/"         >Search WolframAlpha</button>
-
 			</form>
         </div>
     </div>
